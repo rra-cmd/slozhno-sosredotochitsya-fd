@@ -5,12 +5,32 @@
 */
 
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
+    /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+    --bg-img: url("../images/cover-image-dark.png");
+    --color-aarticle-link-focus-visible: #F1B2CE;
+    --color-aarticle-link-hover: #F1B2CE;
+    --color-aarticle-link-text-shadow: #FF0070;
+    --color-aarticle-text: #F1B2CE;
+    --color-aarticle-title: #000028;
+    --color-aarticle-title-bg: #FF0070;
+    --color-decorated-zone: #FF0070;
+    --color-footer-title: #DB00FF;
+    --color-footer-title-shadow: #FF0070; 
+    --color-header-heading: #DB00FF; 
+    --color-header-heading-text-shadow: #FF0070;
+    --color-header-subheading: #000028;
+    --color-header-subheading-bg: #FF0070;
+    --color-header-theme-menu-button: #FF0070;
+    --color-header-theme-menu-button-focus-visible-box-shadow: #FF0070;
+    --color-header-theme-menu-button-thin: rgba(255, 0, 112, 0.4);
+    --color-page-bg: #000028;
+    --color-rec-symbol: #FF0070;
+    --color-section-heading: #FF0070;
 }
 
-.theme-dark .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-dark .rec_symbol {
+    display: flex;
 }

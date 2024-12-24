@@ -2,3 +2,43 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+
+:root {
+  
+/*    Шрифты и строки    */
+--font-size-common: 18px;
+--font-family-common: 'IBM Plex mono', monospace, sans-serif;
+    
+/*    Отступы    */
+--gap-s: 10px;
+--gap-l: 20px;
+    
+/*    Цвета и фон    */
+    --bg-img: url("../images/cover-image-dark.png");
+    --color-aarticle-link-focus-visible: #F1B2CE;
+    --color-aarticle-link-hover: #F1B2CE;
+    --color-aarticle-link-text-shadow: #FF0070;
+    --color-aarticle-text: #F1B2CE;
+    --color-aarticle-title: #000028;
+    --color-aarticle-title-bg: #FF0070;
+    --color-decorated-zone: #FF0070;
+    --color-footer-title: #DB00FF;
+    --color-footer-title-shadow: #FF0070; 
+    --color-header-heading: #DB00FF; 
+    --color-header-heading-text-shadow: #FF0070;
+    --color-header-subheading: #000028;
+    --color-header-subheading-bg: #FF0070;
+    --color-header-theme-menu-button: #FF0070;
+    --color-header-theme-menu-button-focus-visible-box-shadow: #FF0070;
+    --color-header-theme-menu-button-thin: rgba(255, 0, 112, 0.4);
+    --color-page-bg: #000028;
+    --color-rec-symbol: #FF0070;
+    --color-section-heading: #FF0070;
+}
+
+/*    Контуры для проверки*/
+--outline-blue: 1px dashed blue;
+--outline-red: 1px dashed red;
+--outline-green: 1px dashed green;
+--outline-yellow: 1px dashed yellow;
+--outline-white: 1px dashed white;
