@@ -240,7 +240,7 @@
     text-shadow: 2px 2px 0 var(--color-footer-title-shadow);
 }
 
-@media (width > 780px) {
+@media (width >= 768px) {
     .header {
         block-size: 100vh;
         min-block-size: 1024px;
@@ -339,7 +339,7 @@
     }
 }
 
-@media (width > 1024px) {
+@media (width >= 1024px) {
 
     .header {
         block-size: 100vh;
