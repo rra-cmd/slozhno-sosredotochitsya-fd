@@ -6,6 +6,10 @@
     font-size: var(--font-size-common);
     inline-size: 100%;
     background-image: var(--bg-img);
+    background-position: center;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: var(--color-page-bg);
     background-attachment: fixed;
 }
@@ -89,11 +93,9 @@
     color: var(--color-header-theme-menu-button);
     background-color: transparent;
     text-transform: lowercase;
-    /*    text-align: center;*/
     font-size: var(--font-size-common);
     line-height: 1em;
     cursor: pointer;
-
 }
 
 .header__theme-menu-button:hover {
@@ -102,26 +104,26 @@
 
 .header__theme-menu-button:focus-visible {
     outline: transparent;
-    box-shadow: 0 1px 0 0 var(--color-header-theme-menu-button-focus-visible-box-shadow);
+    box-shadow: 0 1px 0 0 currentColor;
 }
 
 .header__theme-menu-button_active {
-    outline: 1px solid var(--color-header-theme-menu-button);
+    outline: 1px solid currentColor;
     pointer-events: none;
 }
 
 /*    Заголовок и подзаголовок    */
 
-.header__heading {
+.common__title {
     line-height: 0.825;
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     font-weight: bold;
     color: var(--color-header-heading);
     text-shadow: 4px 4px 0 var(--color-header-heading-text-shadow);
-    /*    outline: var(--outline-red);*/
+    /*        outline: var(--outline-red);*/
 }
 
-.header__subheading {
+.header__subtitle {
     justify-self: flex-end;
     color: var(--color-header-subheading);
     font-weight: bold;
@@ -131,90 +133,98 @@
 
 /*    Основной контент    */
 
-.mmain {
+.main {
     display: flex;
     flex-direction: column;
-    row-gap: calc(3.2 * var(--gap-s));
-    padding-block: calc(4 * var(--gap-s));
-    /*    outline: var(--outline-red);*/
+    row-gap: calc(3 * var(--gap-s) + 1px);
+    padding-block: calc(4 * var(--gap-s) + 1px);
+    /*    outline: var(--outline-green);*/
 }
 
 .section__common {
     display: grid;
     padding-inline: var(--gap-s);
-/*    Вычитаем один-два пиксела для подбора под макет; можно округлить */
-    margin-block-end: calc(3 * var(--gap-s) - 1);
-/*    outline: var(--outline-blue);*/
+    /*    outline: var(--outline-blue);*/
 }
 
 .section__heading {
     color: var(--color-section-heading);
     font-size: var(--font-size-common);
     font-weight: bold;
-    margin-block-end: var(--gap-l);
-/*    outline: var(--outline-green);*/
+    padding-block-end: var(--gap-l);
+    /*    outline: var(--outline-green);*/
 }
 
-.aarticle__title {
+.article {
+    padding-block-end: 20px;
+    /*    outline: var(--outline-yellow);*/
+}
+
+.article__items_list {
+    gap: var(--gap-l);
+    padding-block-start: calc(var(--gap-l) + 1px);
+    /*    outline: var(--outline-blue);*/
+}
+
+.article__title {
     line-height: inherit;
     font-size: var(--font-size-common);
     font-weight: bold;
-    color: var(--color-aarticle-title);
-    background-color: var(--color-aarticle-title-bg);
-    margin-block-end: var(--gap-s);
-/*    outline: var(--outline-yellow);*/
+    color: var(--color-article-title);
+    background-color: var(--color-article-title-bg);
+    /*    outline: var(--outline-yellow);*/
 }
 
-.aarticle__item_title {
-    margin-block-start: var(--gap-s);
+.article__item_title {
     font-weight: normal;
     /*    outline: 1px dotted orange;*/
 }
 
-.aarticle__text {
+.article__text {
     line-height: 1.3em;
     font-size: var(--font-size-common);
-    color: var(--color-aarticle-text);
-    margin-block-end: var(--gap-l);
+    color: var(--color-article-text);
+    padding-block: var(--gap-s) 0;
     /*    outline: var(--outline-white);*/
 }
 
 /*    ОФОРМЛЕНИЕ ССЫЛКИ В ТЕКСТЕ    */
 
-.aarticle__link {
+.article__link {
     position: relative;
     display: inline-block;
     text-decoration: none;
-    text-shadow: 2px 1px 0 var(--color-aarticle-link-text-shadow);
+    text-shadow: 2px 1px 0 var(--color-article-link-text-shadow);
 }
 
-.aarticle__link:hover {
+.article__link:hover {
     line-height: 1em;
-    border-block-end: 1px solid var(--color-aarticle-link-hover);
+    border-block-end: 1px solid currentColor;
 }
 
-.aarticle__link:active {
+.article__link:active {
     text-decoration: none;
 }
 
-.aarticle__link:focus {
+.article__link:focus {
     outline: none;
 }
 
-.aarticle__link:focus-visible {
+.article__link:focus-visible {
     line-height: 0.5em;
     padding: 5px 3px 7px 3px;
-    outline: 1px solid var(--color-aarticle-link-focus-visible);
+    outline: 1px solid var(--color-article-link-focus-visible);
 }
 
-.section__04 {
+.section__pics {
     padding-inline: var(--gap-s);
-    /*    outline: 1px dotted lightblue;*/
+    /*        outline: 1px dotted lightblue;*/
 }
 
 .section__images {
     display: grid;
     gap: var(--gap-s);
+    padding-block-start: var(--gap-s);
 }
 
 .section__images_item {
@@ -240,14 +250,14 @@
     text-shadow: 2px 2px 0 var(--color-footer-title-shadow);
 }
 
-@media (width >= 768px) {
+@media (width >=768px) {
     .header {
         block-size: 100vh;
         min-block-size: 1024px;
         padding: var(--gap-l);
     }
 
-    .header__heading {
+    .common__title {
         margin-left: calc(-2 * var(--gap-s));
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
@@ -267,42 +277,42 @@
         right: var(--gap-l);
     }
 
-    .header__subheading {
+    .header__subtitle {
         justify-self: flex-end;
         max-inline-size: 50%;
     }
 
-    .mmain {
+    .main {
         display: grid;
         row-gap: calc(6.15 * var(--gap-s));
         padding: calc(6 * var(--gap-s)) var(--gap-s);
     }
 
-    .section__01 {
+    .section__why {
         grid-template-columns: 1fr 2fr;
         row-gap: 0;
         column-gap: var(--gap-l);
     }
 
-    .section__01 .section__heading {
+    .section__why .section__heading {
         grid-row: span 2;
     }
 
-    .section__02 .section__heading {
+    .section__what .section__heading {
         max-inline-size: min-content;
     }
 
-    .section__03 {
+    .section__how {
         grid-template-columns: 1fr 2fr;
         column-gap: var(--gap-l);
     }
 
-    .section__03 .section__heading {
+    .section__how .section__heading {
         grid-row: span 2;
     }
 
-    .section__04 .aarticle__title {
-        margin-block-end: var(--gap-l);
+    .section__pics .article__title {
+        margin-block-end: var(--gap-s);
     }
 
     .section__images {
@@ -339,7 +349,7 @@
     }
 }
 
-@media (width >= 1024px) {
+@media (width >=1024px) {
 
     .header {
         block-size: 100vh;
@@ -357,30 +367,30 @@
         gap: var(--gap-s);
     }
 
-    .header__heading {
+    .common__title {
         margin-block-start: 0;
         font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     }
 
-    .mmain {
+    .main {
         padding: calc(6 * var(--gap-s)) var(--gap-s) calc(6 * var(--gap-s));
     }
 
-    .section__01 {
+    .section__why {
         column-gap: var(--gap-s);
     }
 
-    .section__02 .section__heading {
+    .section__what .section__heading {
         max-inline-size: calc((100% - 2 * var(--gap-l)) / 3);
     }
 
-    .section__02 .aarticle__set {
+    .section__what .article__set {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: var(--gap-l);
     }
 
-    .section__03 {
+    .section__how {
         column-gap: var(--gap-s);
     }
 

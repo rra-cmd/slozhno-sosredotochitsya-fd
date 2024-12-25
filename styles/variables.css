@@ -14,12 +14,12 @@
 
   /*    Цвета и фон    */
   --bg-img: url("../images/cover-image-dark.png");
-  --color-aarticle-link-focus-visible: #f1b2ce;
-  --color-aarticle-link-hover: #f1b2ce;
-  --color-aarticle-link-text-shadow: #ff0070;
-  --color-aarticle-text: #f1b2ce;
-  --color-aarticle-title: #000028;
-  --color-aarticle-title-bg: #ff0070;
+  --color-article-link-focus-visible: #f1b2ce;
+  --color-article-link-hover: #f1b2ce;
+  --color-article-link-text-shadow: #ff0070;
+  --color-article-text: #f1b2ce;
+  --color-article-title: #000028;
+  --color-article-title-bg: #ff0070;
   --color-decorated-zone: #ff0070;
   --color-footer-title: #db00ff;
   --color-footer-title-shadow: #ff0070;
